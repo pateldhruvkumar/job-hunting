@@ -4,6 +4,6 @@
 
 ---
 
-## Master of Professional Studies, Data Analytics (AI/ML Concentration) — Northeastern University | Vancouver, BC | Jan 2025 – Present
+## Master of Professional Studies, Data Analytics (AI/ML Concentration) — Northeastern University | Vancouver, BC | Jan 2025 – Jun 2026
 
 ## Bachelor of Technology, Information Technology | Graduated with Distinction — Uka Tarsadia University | Gujarat, India | Aug 2019 – Feb 2024
