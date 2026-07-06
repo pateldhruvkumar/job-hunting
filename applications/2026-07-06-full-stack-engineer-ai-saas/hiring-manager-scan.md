@@ -12,7 +12,7 @@
    - "Shipped an autonomous due-diligence AI agent that runs multi-source web research..."
    - "Designed a financial-comparison agent... cutting manual comparison effort by 60%."
 4. **Technical Skills row (briefly scanned, bottom glance):** React, Node.js, FastAPI, AWS, AI agents, RAG - matches the stack shape of an AI SaaS product team.
-5. **Total years of experience (inferred):** ~2-2.5 years across four roles - inside the JD's 2-4 band, junior-mid.
+5. **Total years of experience (inferred):** ~2 years across three roles - at the bottom edge of the JD's "likely 2-4" band, junior-mid.
 
 ---
 
@@ -32,17 +32,16 @@ Yes. The first experience entry is a developer at an AI company shipping agents,
 Mostly. "Full-stack developer who moved from Indian web-dev shops through a Canadian master's into AI product engineering" comes through. The education block (Data Analytics MPS, not CS) reads slightly data-flavored for a Full Stack Engineer posting, but the AI/ML concentration works in its favor at an AI company.
 
 ### Red flags the hiring manager would catch
-- **Non-chronological order:** Vault AI (Jun-Dec 2025) is listed above Northeastern (Jan-Jun 2026). A careful reader notices the date inversion. Deliberate tradeoff: it puts the JD-aligned role first and the "most recent title" an ATS extracts becomes Software Developer rather than Operations Data Assistant. If you prefer strict chronology, swap the two entries and accept a weaker first impression.
 - **Gap Aug 2023 - Dec 2024** (~17 months between Dots N Key and the master's start). Will prompt an interview question; not fixable on the resume without new master data.
-- **Short stints:** all four roles are 6-8 months. Partly explained by co-op/student context, but expect a "why did you leave Vault AI?" question.
-- **Just-ended degree (Jun 2026):** signals new-grad-with-experience; fine for the 2-4 year band, but the JD's "more than 9 to 5" startup will probe for production war stories - the POS migration and uptime bullets are the ammunition.
+- **Nothing dated after Dec 2025 except the degree:** with the Northeastern operations role removed (user's choice), Vault AI ending Dec 2025 is the most recent work entry, ~7 months before the application date. The Jun 2026 degree end date explains it, but a skeptical reader may ask "what have you been doing since December?"
+- **Short stints:** all three roles are 6-8 months. Partly explained by co-op/student context, but expect a "why did you leave Vault AI?" question.
+- **Just-ended degree (Jun 2026):** signals new-grad-with-experience; borderline for the 2-4 year band, but the JD's "more than 9 to 5" startup will probe for production war stories - the POS migration and uptime bullets are the ammunition.
 
 ---
 
 ## Specific Fixes to Maximize 10-Second Impact
 
 1. **Add Claude Code/Cursor to Technical Skills if true** (also the #1 ATS fix). For this specific company - which filters hard on AI-tool fluency - it may be the difference between screen-in and screen-out.
-2. **Optional:** annotate the Northeastern role as part-time ("Operations Data Assistant (Part-time)") so the date inversion with Vault AI reads as "student job alongside degree" rather than a sequencing error.
-3. **Optional:** if Vault AI was early-stage, say so in the application form or intro note ("4-person team", "seed-stage") - it hits the JD's explicit bonus and reframes the short stint.
+2. **Optional:** if Vault AI was early-stage, say so in the application form or intro note ("4-person team", "seed-stage") - it hits the JD's explicit bonus and reframes the short stint.
 
 No structural changes needed. The top third makes a strong impact for this role.

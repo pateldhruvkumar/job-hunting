@@ -24,11 +24,6 @@
 - Designed a financial-comparison agent that benchmarks companies' fiscal performance, cutting manual effort 60%.
 - Implemented secure RAG pipelines over 100+ confidential documents with vector retrieval, and fine-tuned Llama LLMs with QLoRA, lifting answer accuracy 15% on internal evaluations.
 
-**Northeastern University** | Vancouver, BC
-*Operations Data Assistant* | Jan 2026 – Jun 2026
-
-- Diagnosed and rewrote a faulty cost-calculation query in the internal operations database, correcting pricing logic and saving thousands of dollars in annual order spend.
-
 **Dots N Key** | Surat, India
 *Software Developer* | Dec 2022 – Jul 2023
 
@@ -40,6 +35,7 @@
 *Software Developer* | May 2022 – Nov 2022
 
 - Delivered 14 interactive PHP/MySQL dashboards for 12+ stakeholders, replacing spreadsheet-based reporting and cutting report turnaround 40%.
+- Hardened a multi-user platform with role-based access control across 21 role tiers and integrated 45+ third-party task APIs, reducing cross-team handoff delays 23%.
 
 ---
 
