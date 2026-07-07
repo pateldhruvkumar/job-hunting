@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in LaTeX  --  Jake's Resume (Overleaf), MIT License
+% https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% Tailored for: GymnO Laval -- Data Analyst
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dhruvkumar Patel} \\ \vspace{1pt}
+    \small (672) 553-1105 $|$ \href{mailto:dhruvv.patel@outlook.com}{\underline{dhruvv.patel@outlook.com}} $|$
+    \href{https://www.linkedin.com/in/dhruvkumarpatell/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/pateldhruvkumar}{\underline{GitHub}} $|$
+    \href{https://dhruvvkumarpatel.vercel.app/}{\underline{Portfolio}} $|$
+    Vancouver, BC
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  \small{A data analytics professional with a passion for turning messy, multi-source data into dashboards and reports that drive business decisions. With a Data Analytics master's and hands-on Power BI, SQL, and Python work, has consolidated 33,000+ records across 11 datasets and cut an operations report's refresh time by 13\%. Seeking a data analyst role focused on reporting, BI dashboards, and clear insight communication.}
+  \vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northeastern University}{Vancouver, BC}
+      {Master of Professional Studies, Data Analytics (AI/ML Concentration)}{Jan 2025 -- Jun 2026}
+    \resumeSubheading
+      {Uka Tarsadia University}{Gujarat, India}
+      {Bachelor of Technology, Information Technology (Graduated with Distinction)}{Aug 2019 -- Feb 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northeastern University}{Vancouver, BC}
+      {Operations Data Assistant}{Jan 2026 -- Jun 2026}
+      \resumeItemListStart
+        \resumeItem{Optimized Power BI dashboards by refactoring DAX measures and calculated columns, cutting report refresh time by 13\% and speeding up operations reporting.}
+        \resumeItem{Managed a student-records database of 1,000+ active students, maintaining data accuracy and integrity to support daily operations reporting and workflows.}
+        \resumeItem{Diagnosed and rewrote an inefficient cost-calculation SQL query, correcting pricing logic and reducing university order spend by thousands of dollars annually.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Vault AI}{Remote}
+      {Software Developer}{Jun 2025 -- Dec 2025}
+      \resumeItemListStart
+        \resumeItem{Built an AI-powered client-intake portal enabling natural-language analytics on financial data and automated extraction from unstructured PDFs, on Supabase and serverless Edge Functions.}
+        \resumeItem{Designed a Multi-Company Financial Comparison tool that benchmarked fiscal performance across entities, reducing manual comparison effort by 60\%.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Dots N Key}{Surat, India}
+      {Software Developer}{Dec 2022 -- Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Boosted query performance by 60\% on a high-traffic retail POS platform by leading the full MySQL to AWS RDS migration, unlocking production-grade scale.}
+        \resumeItem{Trimmed data-handling overhead by 25\% and lifted application performance by 35\% through optimized stored procedures and refactored backend logic.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Global Seaweed Market Analytics Dashboard} $|$ \emph{Python, DuckDB, React}}{Apr 2026 -- Jun 2026}
+          \resumeItemListStart
+            \resumeItem{Consolidated 11 raw datasets (33,000+ records) from FAO, Statistics Canada, and UN Comtrade into a single DuckDB analytical layer covering seaweed production across 100+ countries (1950-2024).}
+            \resumeItem{Automated stakeholder reporting with one-click Excel workbooks per dashboard tab, one sheet per dataset plus a citations-and-caveats sheet, generated client-side with SheetJS.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{YVR EV Charging Analytics Dashboard} $|$ \emph{Python, Streamlit}}{Jan 2026 -- Apr 2026}
+          \resumeItemListStart
+            \resumeItem{Designed a 7-tab Streamlit dashboard on 183,909 cleaned charging sessions across 56 chargers, giving operations real-time visibility into charger health for a 260-vehicle fleet.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Steve's and Associates - Billing Analytics} $|$ \emph{Python, SQL, scikit-learn}}{Sep 2025 -- Dec 2025}
+          \resumeItemListStart
+            \resumeItem{Streamlined Python and SQL ingestion to transform 6 fiscal years of billing data across 50+ enterprise clients, defining KPI metrics and accelerating executive report generation by 40\%.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, JavaScript, PHP} \\
+     \textbf{Analytics \& BI}{: Excel, Power BI, DAX, Streamlit, Plotly} \\
+     \textbf{Data \& Cloud}{: DuckDB, MySQL, MongoDB, AWS (S3, Lambda, Glue, RDS, DynamoDB), Supabase} \\
+     \textbf{Libraries \& Tools}{: pandas, NumPy, scikit-learn, XGBoost, LightGBM, Git}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
