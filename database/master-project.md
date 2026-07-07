@@ -6,7 +6,7 @@
 
 ---
 
-## Flagship: Seaweed Market Intelligence Dashboard (three role-specific variants)
+## Flagship: Seaweed Market Intelligence Dashboard (three role-specific variants) Apr 2026 - Jun 2026
 
 One project, three interchangeable presentations. Each variant below is self-contained with its own resume title, tech-stack line, and bullet set.
 
@@ -46,12 +46,12 @@ One project, three interchangeable presentations. Each variant below is self-con
 - Designed a 7-tab Streamlit dashboard on 183,909 cleaned charging sessions spanning 56 PosiCharge DVS 400 chargers, giving YVR operations real-time visibility into charger health for a 260-vehicle electric ground-support fleet.
 - Engineered a Weighted Ensemble forecasting model (Random Forest + XGBoost + LightGBM) on 33 derived time, lag, flight, and weather features, hitting 84.7% binary accuracy and a 28% MAE reduction (15.26 → 10.94) over a 2-month baseline.
 
-### AWS Big Data Pipeline – Serverless ETL Architecture | AWS S3, Lambda, Glue, DynamoDB | Mar 2026
+### AWS Big Data Pipeline – Serverless ETL Architecture | AWS S3, Lambda, Glue, DynamoDB | Jan 2026 - Mar 2026
 
 - Built an end-to-end serverless ETL pipeline in Python on AWS (S3, Lambda, Glue, DynamoDB) to ingest, validate, deduplicate, and load 5.6M user records, fully automating a previously hands-on workflow.
 - Cut batch insert time by 40% by parallelizing ingestion logic with memory-efficient data structures across distributed Lambda functions for high-throughput processing under concurrent-execution constraints.
 
-### eHealth – Full-Stack Analytics Platform | Node.js, React.js, MongoDB, AWS | Jan 2026
+### eHealth – Full-Stack Analytics Platform | Node.js, React.js, MongoDB, AWS | Jan 2026 - Feb 2026
 
 - Designed a microservice health analytics platform in Node.js, React.js, and MongoDB with ML prediction models on AWS CI/CD, lifting adoption by 50% and cutting prescription errors by 30% through clinical decision support.
 
