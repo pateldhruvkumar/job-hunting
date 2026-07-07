@@ -40,24 +40,19 @@ An AI/ML engineer with a passion for agentic GenAI systems, LLM orchestration, a
 *Operations Data Assistant* | Jan 2026 – Jun 2026
 
 - Diagnosed and rewrote an inefficient cost-calculation query in the operations database, correcting pricing logic and cutting university order spend by thousands of dollars annually.
-- Maintained data accuracy and integrity across a 1,000+ student records database, supporting operations reporting and daily workflows.
 
 ---
 
 ## Projects
 
-**AI-Powered Seaweed Market Intelligence Dashboard** | *LLM Text-to-SQL, Embeddings, FastAPI* | Apr 2026 – Jun 2026
+**Seaweed Market Intelligence Dashboard** | *LLM Text-to-SQL, Embeddings, FastAPI* | Apr 2026 – Jun 2026
 
 - Engineered a text-to-SQL chat assistant on FastAPI and DuckDB where Qwen3.6-35B (via OpenRouter) generates queries against a 27,000-row dataset, grounded in the live schema, retrieved entities, and few-shot examples.
 - Enforced SQL safety in three layers (parser validation, write-statement blocks, and up to 3 error-feedback retries), plus an enrichment LLM pass that summarizes results and selects a chart type, degrading to a plain table on failure.
 
-**Vancouver International Airport (YVR) Charging Forecast** | *Python, Streamlit, XGBoost, LightGBM* | Jan 2026 – Apr 2026
+**YVR EV Charging Demand Forecast** | *Python, Streamlit, XGBoost, LightGBM* | Jan 2026 – Apr 2026
 
 - Engineered a Weighted Ensemble forecasting model (Random Forest, XGBoost, LightGBM) on 33 derived time, lag, flight, and weather features, hitting 84.7% accuracy and a 28% MAE reduction over a 2-month baseline for a 260-vehicle electric fleet.
-
-**Kahoot Bot — Agentic AI Automation** | *Python, n8n, REST APIs* | Aug 2025
-
-- Shipped an automated AI quiz system with n8n orchestrating 3 open-source APIs, hitting 90% accuracy while cutting inference costs 60% via optimized call sequencing; placed 2nd of 15+ teams at Northeastern's Agentic AI 2.0 Hackathon.
 
 ---
 
