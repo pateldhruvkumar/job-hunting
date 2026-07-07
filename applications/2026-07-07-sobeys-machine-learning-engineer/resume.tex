@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in LaTeX  --  Jake's Resume (Overleaf), MIT License
+% https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% Tailored for: Sobeys -- Machine Learning Engineer (2026-07-07)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dhruvkumar Patel} \\ \vspace{1pt}
+    \small (672) 553-1105 $|$ \href{mailto:dhruvv.patel@outlook.com}{\underline{dhruvv.patel@outlook.com}} $|$
+    \href{https://www.linkedin.com/in/dhruvkumarpatell/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/pateldhruvkumar}{\underline{GitHub}} $|$
+    \href{https://dhruvvkumarpatel.vercel.app/}{\underline{Portfolio}} $|$
+    Vancouver, BC
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  \small{An AI/ML engineer with a passion for agentic AI systems, retrieval-augmented generation, and production LLM applications. With a background spanning autonomous multi-agent systems for private-credit due diligence, RAG pipelines over 100+ confidential documents, and a fine-tuned Llama model, has cut manual analysis effort 60\% and lifted answer accuracy 15\%. Seeking a Machine Learning Engineer role building end-to-end agentic AI/ML solutions.}
+  \vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northeastern University}{Vancouver, BC}
+      {Master of Professional Studies, Data Analytics (AI/ML Concentration)}{Jan 2025 -- Jun 2026}
+    \resumeSubheading
+      {Uka Tarsadia University}{Gujarat, India}
+      {Bachelor of Technology, Information Technology (Graduated with Distinction)}{Aug 2019 -- Feb 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vault AI}{Remote}
+      {Software Developer}{Jun 2025 -- Dec 2025}
+      \resumeItemListStart
+        \resumeItem{Engineered an autonomous Due Diligence Agent that orchestrates multi-source web research, synthesizing credit-risk and legal-compliance findings into production-ready PDF reports for private-credit firms.}
+        \resumeItem{Designed a Multi-Company Financial Comparison Agent that benchmarks fiscal performance across entities, cutting manual comparison effort 60\%.}
+        \resumeItem{Built secure RAG pipelines over 100+ confidential documents with vector retrieval and sentence embeddings, grounding LLM answers for complex financial inquiries while enforcing data privacy.}
+        \resumeItem{Fine-tuned Llama models with QLoRA on domain-specific terminology, improving answer accuracy 15\% on internal evaluations.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Dots N Key}{Surat, India}
+      {Software Developer}{Dec 2022 -- Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Led backend performance, cloud infrastructure, and full-stack optimization for a high-traffic retail POS platform running production workloads.}
+        \resumeItem{Boosted query performance 60\% on the SONAR POS platform by leading a full MySQL to AWS RDS migration, removing single-point-of-failure risk and unlocking production-grade scalability for high-traffic retail operations.}
+        \resumeItem{Maintained 99.9\% system uptime by deploying cloud infrastructure on AWS EC2 and S3 with real-time monitoring dashboards, resolving production incidents before end-user impact.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AI-Powered Seaweed Market Intelligence Dashboard} $|$ \emph{LLM Text-to-SQL, Embeddings, FastAPI, DuckDB}}{Apr 2026 -- Jun 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered a text-to-SQL chat assistant on FastAPI and DuckDB where an LLM (Qwen3.6-35B via OpenRouter) generates queries over a 27,000-row dataset, grounded in live schema, retrieved entities, and few-shot examples.}
+            \resumeItem{Indexed roughly 41,000 entity values with bge-small-en-v1.5 sentence embeddings to resolve fuzzy phrasing to exact database values, and enforced SQL safety through parser validation, write-statement blocks, and up to 3 model-feedback retries.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Kahoot Bot - Agentic AI Automation} $|$ \emph{Python, n8n, REST APIs}}{Aug 2025}
+          \resumeItemListStart
+            \resumeItem{Shipped an agentic AI quiz automation in Python with n8n orchestrating 3 open-source APIs, hitting 90\% accuracy while cutting inference cost 60\% via optimized call sequencing; placed 2nd of 15+ teams at Northeastern's Agentic AI 2.0 Hackathon.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{AWS Big Data Pipeline - Serverless ETL} $|$ \emph{Python, AWS S3, Lambda, Glue, DynamoDB}}{Jan 2026 -- Mar 2026}
+          \resumeItemListStart
+            \resumeItem{Built an end-to-end serverless ETL pipeline in Python on AWS to ingest, validate, deduplicate, and load 5.6M records, cutting batch insert time 40\% by parallelizing ingestion across distributed Lambda functions.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, JavaScript, TypeScript, PHP} \\
+     \textbf{AI/ML}{: LLMs, Agentic AI, RAG, LLM fine-tuning (QLoRA), Sentence embeddings, Text-to-SQL, PyTorch, scikit-learn, XGBoost, LightGBM} \\
+     \textbf{Frameworks \& Tools}{: FastAPI, React, Node.js, Express, Streamlit, n8n, Git} \\
+     \textbf{Cloud \& Databases}{: AWS (EC2, S3, Lambda, Glue, RDS, DynamoDB), Supabase, MySQL, MongoDB, DuckDB, Vector retrieval}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
