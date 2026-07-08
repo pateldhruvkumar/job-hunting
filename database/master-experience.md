@@ -4,7 +4,7 @@
 
 ---
 
-## Operations Data Assistant — Northeastern University | Jan 2026 – Jun 2026
+## Operations Data Assistant — Northeastern University Vancouver, BC | Jan 2026 – Jun 2026
 
 - Optimized Power BI dashboards by refactoring DAX measures and calculated columns, reducing report refresh time by 13%.
 - Managed a student records database of 1,000+ active students, maintaining data accuracy and integrity to support operations reporting and daily workflows.
@@ -12,7 +12,7 @@
 
 ---
 
-## Software Developer — Vault AI | Jun 2025 – Dec 2025
+## Software Developer — Vault AI Vancouver,BC | Jun 2025 – Dec 2025
 
 - Architected an AI-powered client intake portal for private credit firms, enabling natural-language analytics on financial data and automated extraction from unstructured PDFs, built on Supabase and serverless Edge Functions for real-time processing.
 - Engineered an autonomous Due Diligence Agent that orchestrates multi-source web research to synthesize credit risk and legal compliance into production-ready PDF reports.
@@ -31,6 +31,14 @@
 - Implemented client-side password validation and refined the multi-user authentication and account-management modals.
 - Optimized responsive layout and accessibility across chat, settings, and onboarding views (input alignment, scroll containers, dimension fixes) to support varied screen sizes.
 - Collaborated on a 3-service monorepo (React/Vite frontend, Node/Express API, document collector) alongside a 7-developer team, contributing 79 commits through a Git feature-branch and pull-request workflow.
+
+---
+
+## Warehouse Logistics Associate — Jim Pattison Food Group (Save-On-Foods), Surrey, BC | Mar 2025 – Present
+
+- Manage daily cycle counts and inventory audits across warehouse systems, reconciling stock levels and resolving overages, shortages, and damaged goods across 200+ orders daily serving roughly 300 retail stores.
+- Validate incoming deliveries against bills of lading and packing slips and coordinate shipping and receiving documentation, keeping system orders closed and inventory records current.
+- Coordinate weekly interbranch shipment documentation and backorder communications and prepare daily KPI reports tracking inventory accuracy, fulfillment rate, and shipping performance.
 
 ---
 

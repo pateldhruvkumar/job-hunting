@@ -68,3 +68,19 @@ One project, three interchangeable presentations. Each variant below is self-con
 ### Kahoot Bot – Agentic AI Automation | Python, n8n, REST APIs | Aug 2025
 
 - Shipped an automated AI quiz system in Python with n8n orchestrating 3 open-source APIs, hitting 90% accuracy while cutting inference costs by 60% via optimized call sequencing; placed 2nd of 15+ teams at Northeastern's Agentic AI 2.0 Hackathon.
+
+
+## Inventory Analyst Projects
+
+### Charging Demand Forecast, Vancouver International Airport (Capstone)	Jan 2026 - Apr 2026
+
+- Engineered a weighted ensemble forecasting model (Random Forest, XGBoost, LightGBM) on 33 time, lag, flight, and weather features, reaching 84.7% accuracy and cutting forecast error 28%.
+- Processed 183,909 charging sessions across 56 chargers into a clean modeling dataset, giving operations demand visibility for a 260-vehicle electric ground-support fleet.
+- Delivered a 7-tab Streamlit dashboard surfacing real-time demand and asset-health signals so planners could anticipate shortfalls before they hit operations.
+
+
+### Global Seaweed Market Analytics Dashboard	Apr 2026 - Jun 2026
+
+- Consolidated 11 datasets (33,000+ records) from FAO, Statistics Canada, and UN Comtrade into a single DuckDB analytical layer covering supply across 100+ countries.
+- Tracked industry KPIs including export value, price per tonne, value per pound, and gross output across 2010 to 2023 to expose supply concentration and pricing trends.
+- Automated stakeholder reporting with one-click Excel workbooks across 13 dashboard views, each carrying source citations and data-quality caveats, replacing manual spreadsheet prep.
