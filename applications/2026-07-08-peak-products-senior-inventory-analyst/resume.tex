@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in LaTeX  --  Jake's Resume (Overleaf), MIT License
+% https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Dhruvkumar Patel} \\ \vspace{1pt}
+    \small (672) 553-1105 $|$ \href{mailto:dhruvv.patel@outlook.com}{\underline{dhruvv.patel@outlook.com}} $|$
+    \href{https://www.linkedin.com/in/dhruvkumarpatell/}{\underline{LinkedIn}} $|$
+    \href{https://github.com/pateldhruvkumar}{\underline{GitHub}} $|$
+    \href{https://dhruvvkumarpatel.vercel.app/}{\underline{Portfolio}} $|$
+    Vancouver, BC
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+  \small{A supply chain and data analytics professional focused on demand forecasting, inventory accuracy, and cross-functional supply planning. Backed by hands-on warehouse inventory operations serving roughly 300 retail stores and a graduate data-analytics education, has built forecasting models reaching 84.7\% accuracy and cut operational order spend by thousands of dollars annually. Actively seeking a senior inventory analyst role in a manufacturing or distribution environment.}
+  \vspace{-4pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Northeastern University}{Vancouver, BC}
+      {Master of Professional Studies, Data Analytics (AI/ML Concentration)}{Jan 2025 -- Jun 2026}
+    \resumeSubheading
+      {Uka Tarsadia University}{Gujarat, India}
+      {Bachelor of Technology, Information Technology -- Graduated with Distinction}{Aug 2019 -- Feb 2024}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Jim Pattison Food Group (Save-On-Foods)}{Surrey, BC}
+      {Warehouse Logistics Associate}{Mar 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Manage daily cycle counts and inventory audits across warehouse systems, reconciling overages, shortages, and damaged goods to keep inventory records accurate across 200+ orders daily serving roughly 300 retail stores.}
+        \resumeItem{Validate incoming deliveries against bills of lading and packing slips and coordinate receiving documentation with carriers and suppliers, keeping system orders closed and inventory records current.}
+        \resumeItem{Coordinate weekly interbranch shipment and backorder communications with logistics and store teams to maintain product availability across locations and prevent stockouts.}
+        \resumeItem{Prepare daily KPI reports tracking inventory accuracy, fulfillment rate, and shipping performance to support operational planning and replenishment decisions.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Northeastern University}{Vancouver, BC}
+      {Operations Data Assistant}{Jan 2026 -- Jun 2026}
+      \resumeItemListStart
+        \resumeItem{Diagnosed and rewrote an inefficient cost-calculation query in the operations database, correcting pricing logic and cutting order spend by thousands of dollars annually.}
+        \resumeItem{Built and optimized Power BI dashboards by refactoring DAX measures and calculated columns, reducing report refresh time 13\% and giving stakeholders faster operational visibility.}
+        \resumeItem{Managed a 1,000+ record operations database, maintaining data accuracy and integrity to support operations reporting and daily planning workflows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Dots N Key}{Surat, India}
+      {Software Developer}{Dec 2022 -- Jul 2024}
+      \resumeItemListStart
+        \resumeItem{Boosted query performance 60\% on a high-traffic retail POS platform by leading a full MySQL to AWS RDS migration, unlocking production-grade scalability for retail operations data.}
+        \resumeItem{Maintained 99.9\% system uptime by deploying cloud infrastructure with real-time monitoring dashboards, catching and resolving incidents before end-user impact.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Charging Demand Forecast, Vancouver International Airport (Capstone)} $|$ \emph{Python, Random Forest, XGBoost, LightGBM}}{Jan 2026 -- Apr 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered a weighted ensemble forecasting model (Random Forest, XGBoost, LightGBM) on 33 time, lag, flight, and weather features, reaching 84.7\% accuracy and cutting forecast error 28\%.}
+            \resumeItem{Processed 183,909 sessions across 56 assets into a clean modeling dataset and delivered a 7-tab Streamlit dashboard surfacing demand and asset-health signals so planners could anticipate shortfalls before they hit operations.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Global Seaweed Market Analytics Dashboard} $|$ \emph{Python, DuckDB, Excel}}{Apr 2026 -- Jun 2026}
+          \resumeItemListStart
+            \resumeItem{Consolidated 11 datasets (33,000+ records) from FAO, Statistics Canada, and UN Comtrade into a single DuckDB analytical layer covering supply across 100+ countries, tracking KPIs like export value, price per tonne, and gross output.}
+            \resumeItem{Automated stakeholder reporting with one-click Excel workbooks across 13 dashboard views, each carrying source citations and data-quality caveats, replacing manual spreadsheet prep.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Analytics \& Forecasting}{: Demand forecasting, time-series and ensemble modeling (Random Forest, XGBoost, LightGBM), KPI reporting, cost and variance analysis} \\
+     \textbf{Data \& BI Tools}{: Microsoft Excel, Power BI (DAX), Streamlit, Plotly} \\
+     \textbf{Databases \& Systems}{: SQL, MySQL, DuckDB, MongoDB, warehouse / inventory management systems, AWS (S3, RDS, Lambda)} \\
+     \textbf{Programming}{: Python (pandas, NumPy, scikit-learn), SQL, JavaScript/TypeScript}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
