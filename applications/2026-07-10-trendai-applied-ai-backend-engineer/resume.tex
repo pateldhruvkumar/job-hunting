@@ -61,10 +61,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Left column is a wrapping p-column so a long project name + tech stack can
+% never push the date past the right margin; the date is \small and right-aligned.
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+    \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}p{0.78\textwidth} r@{}}
+      \small #1 & \small #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -139,13 +141,13 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{AI-Powered Seaweed Market Intelligence Dashboard} $|$ \emph{LLM Text-to-SQL, Embeddings, FastAPI, DuckDB}}{Apr 2026 -- Jun 2026}
+          {\textbf{AI-Powered Seaweed Market Intelligence Dashboard} $|$ \emph{FastAPI, DuckDB, Text-to-SQL, Embeddings}}{Apr 2026 -- Jun 2026}
           \resumeItemListStart
             \resumeItem{Engineered a text-to-SQL chat assistant on FastAPI and DuckDB in which an LLM generates queries against a 27,000-row dataset, grounded in the live schema, retrieved entities, and few-shot examples.}
             \resumeItem{Indexed roughly 41,000 entity values with bge-small-en-v1.5 sentence embeddings to resolve fuzzy phrasing to exact database values, and enforced SQL safety through parser validation, write-statement blocks, and error-fed retries.}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{AWS Big Data Pipeline -- Serverless ETL Architecture} $|$ \emph{AWS S3, Lambda, Glue, DynamoDB, Python}}{Jan 2026 -- Mar 2026}
+          {\textbf{AWS Big Data Pipeline -- Serverless ETL} $|$ \emph{AWS Lambda, Glue, S3, DynamoDB, Python}}{Jan 2026 -- Mar 2026}
           \resumeItemListStart
             \resumeItem{Built an end-to-end serverless ETL pipeline in Python on AWS to ingest, validate, deduplicate, and load 5.6M records, fully automating a previously manual workflow.}
             \resumeItem{Cut batch insert time 40\% by parallelizing ingestion logic across distributed Lambda functions under concurrent-execution constraints.}

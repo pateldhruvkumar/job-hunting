@@ -47,12 +47,12 @@ AI-focused software engineer who builds backend services and applied-AI systems:
 
 ## Projects
 
-**AI-Powered Seaweed Market Intelligence Dashboard** | *LLM Text-to-SQL, Embeddings, FastAPI, DuckDB* | Apr 2026 – Jun 2026
+**AI-Powered Seaweed Market Intelligence Dashboard** | *FastAPI, DuckDB, Text-to-SQL, Embeddings* | Apr 2026 – Jun 2026
 
 - Engineered a text-to-SQL chat assistant on FastAPI and DuckDB in which an LLM generates queries against a 27,000-row dataset, grounded in the live schema, retrieved entities, and few-shot examples.
 - Indexed roughly 41,000 entity values with bge-small-en-v1.5 sentence embeddings to resolve fuzzy phrasing to exact database values, and enforced SQL safety through parser validation, write-statement blocks, and error-fed retries.
 
-**AWS Big Data Pipeline – Serverless ETL Architecture** | *AWS S3, Lambda, Glue, DynamoDB, Python* | Jan 2026 – Mar 2026
+**AWS Big Data Pipeline – Serverless ETL** | *AWS Lambda, Glue, S3, DynamoDB, Python* | Jan 2026 – Mar 2026
 
 - Built an end-to-end serverless ETL pipeline in Python on AWS to ingest, validate, deduplicate, and load 5.6M records, fully automating a previously manual workflow.
 - Cut batch insert time 40% by parallelizing ingestion logic across distributed Lambda functions under concurrent-execution constraints.
