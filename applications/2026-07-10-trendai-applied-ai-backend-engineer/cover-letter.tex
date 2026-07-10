@@ -1,0 +1,52 @@
+%-------------------------
+% Cover letter in LaTeX -- one page, clean business-letter style.
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}         % paragraph spacing instead of indents
+\usepackage[english]{babel}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\pagestyle{empty}
+
+\begin{document}
+
+%---------- SENDER ----------
+\begin{center}
+    {\Large \scshape Dhruvkumar Patel}\\[2pt]
+    \small Vancouver, BC $|$ (672) 553-1105 $|$ \href{mailto:dhruvv.patel@outlook.com}{dhruvv.patel@outlook.com} $|$
+    \href{https://www.linkedin.com/in/dhruvkumarpatell/}{LinkedIn} $|$ \href{https://dhruvvkumarpatel.vercel.app/}{Portfolio}
+\end{center}
+
+\vspace{8pt}
+July 10, 2026
+
+\vspace{4pt}
+Hiring Team\\
+TrendAI (Trend Micro)
+
+\vspace{8pt}
+Dear Hiring Team,
+
+I am applying for the Applied AI Backend Engineer role (R0009942) on TrendAI Vision One. Building backend services that put AI into production is the work I have spent the last year doing, and I am ready to relocate to Ottawa and work on your hybrid, three-days-a-week schedule to do it on a security platform operating at real scale.
+
+At Vault AI I architected an AI-powered client intake portal for private credit firms on Supabase and serverless Edge Functions, then built secure RAG pipelines over 100+ confidential documents with vector retrieval so the system stayed grounded and private on sensitive financial data. I also shipped an autonomous due-diligence agent that turns multi-source research into production-ready reports and fine-tuned Llama models with QLoRA to lift answer accuracy 15\%. That is the same combination your role calls for: AI-driven business logic, vector data stores, and backend services that have to be both secure and maintainable.
+
+The scale and reliability side of the job is where my earlier work fits. At Dots N Key I led a full MySQL to AWS RDS migration that cut query time 60\% and removed a single point of failure, and I held 99.9\% uptime by running the platform on AWS EC2 and S3 with real-time monitoring dashboards, catching production incidents before they reached users. More recently I built a serverless ETL pipeline on AWS (Lambda, Glue, S3, DynamoDB) that ingests and deduplicates 5.6M records, and a text-to-SQL assistant on FastAPI and DuckDB with schema grounding and layered SQL-safety checks. Cloud-native services, APIs, data pipelines, and observability are already how I work.
+
+I would welcome the chance to discuss how I can contribute to Vision One and to TrendAI's AI-first engineering culture. Thank you for your consideration.
+
+\vspace{8pt}
+Sincerely,\\
+Dhruvkumar Patel
+
+\end{document}
