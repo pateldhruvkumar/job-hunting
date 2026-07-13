@@ -6,3 +6,4 @@
 
 | Date | Company | Role | Track | Branch | Status | Submitted | Outreach sent | Follow-up due | Response | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 2026-07-07 | HelloFresh | Machine Learning Engineer | ml-ai | 2026-07-07-hellofresh-machine-learning-engineer | prepared |  |  |  |  | dry-run registration; user to confirm real status |
