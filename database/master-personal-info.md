@@ -12,5 +12,5 @@
 
 ## Notes
 
-- Resume heading format (Jake's Resume template): phone | email | LinkedIn | GitHub | portfolio | location, one centered line under the name.
+- Resume heading: this contact block fills the heading of the Word resume template (`resume-template/resume-template.docx`) — phone | email | LinkedIn | GitHub | portfolio | location.
 - GitHub URL inferred from the seaweed-industry repository owner; confirm it is the primary public profile.
