@@ -7,3 +7,4 @@
 | Date | Company | Role | Track | Branch | Status | Submitted | Outreach sent | Follow-up due | Response | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 2026-07-07 | HelloFresh | Machine Learning Engineer | ml-ai | 2026-07-07-hellofresh-machine-learning-engineer | prepared |  |  |  |  | dry-run registration; user to confirm real status |
+| 2026-07-13 | Armilla AI | AI Engineer | ml-ai | 2026-07-13-armilla-ai-ai-engineer | prepared |  |  |  |  | Cold apply via Rippling ATS; hybrid Toronto, relocation stated in letter; outreach target Scott Head (verify on LinkedIn) |
