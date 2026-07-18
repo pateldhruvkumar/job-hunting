@@ -41,6 +41,17 @@ One project, three interchangeable presentations. Each variant below is self-con
 
 ## Other Projects
 
+### Olist E-Commerce Logistics & Margin Optimization Pipeline | Python, PostgreSQL (Supabase), SQL, Excel, Power BI (DAX) | Jul 2026
+
+- Built an end-to-end analytics pipeline that moved 100K+ Olist Brazilian e-commerce records from 9 raw Kaggle CSVs into a live cloud Supabase PostgreSQL database using a Python and SQLAlchemy loader with chunked, multi-row bulk inserts, replacing flat-file analysis with a queryable relational source.
+- Engineered a SQL master view joining orders, order_items, customers, and products that derives delivery_delay_days from the gap between actual and estimated delivery dates, handles nulls, and filters to delivered orders, so every downstream tool consumed clean, pre-calculated data instead of raw tables.
+- Developed a dynamic Excel unit-economics "What-If" model on PivotTables covering all 27 Brazilian states, driving projected freight and per-order margin loss from a single carrier-rate parameter cell with absolute references, giving the operations team a sandbox to test carrier pricing scenarios.
+- Quantified freight-cost sensitivity with the model, showing a 20% carrier rate hike adds $8.01 of freight cost per order in remote Acre versus just $3.02 in São Paulo, translating an abstract rate change into concrete per-state margin impact.
+- Modeled the Power BI dataset as a star schema, building a dynamic DAX date dimension with CALENDARAUTO and linking it one-to-many to the logistics fact table to unlock time-intelligence analysis across 2016 to 2018 via a year slicer.
+- Centralized business logic in a dedicated DAX measures table, including an SLA Breach Rate measure that divides late orders (delivery_delay_days > 0) by total orders, exposing a 7% nationwide breach rate against 60K total orders and an 11-day average early-delivery buffer.
+- Implemented a custom Brazil Shape Map hardcoded to national geometry to bypass Bing Maps misreading Brazilian state codes as US states (e.g., AL as Alabama, not Alagoas), with red/green conditional formatting on SLA breach rate for instant, pre-attentive reading of failure hotspots.
+- Surfaced actionable logistics insights: freight-to-price ratios above 50% in remote northern states (Rondônia 59.6%, Roraima 56.8%, Maranhão 55.0%) versus 26.5% in São Paulo, and heavy/bulky categories such as furniture as the main drivers of nationwide delivery delays, pointing to a need for a specialized oversized-freight partner.
+
 ### Vancouver International Airport (YVR) — Capstone | Jan 2026 – Apr 2026
 
 - Designed a 7-tab Streamlit dashboard on 183,909 cleaned charging sessions spanning 56 PosiCharge DVS 400 chargers, giving YVR operations real-time visibility into charger health for a 260-vehicle electric ground-support fleet.
