@@ -28,8 +28,8 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
 WORKBOOK_PATH = Path(__file__).resolve().parent.parent / "application-tracker.xlsx"
-HEADERS = ["Date", "Company Name", "Job Role", "Status", "Job Description"]
-COLUMN_WIDTHS = [12, 30, 42, 14, 90]
+HEADERS = ["Date", "Company Name", "Job Role", "Status", "Salary", "Job Description"]
+COLUMN_WIDTHS = [12, 30, 42, 14, 30, 90]
 STATUS_OPTIONS = ["Applied", "Interview", "Rejected"]
 FONT_NAME = "Arial"
 MAX_JD_CHARS = 32000  # Excel cell hard limit is 32,767 characters
@@ -86,8 +86,11 @@ def make_readme(wb: Workbook):
          "(scripts/update-application-tracker.py) when an application is registered.", False),
         ("Status is the only column meant to be edited by hand - use its dropdown: "
          "Applied / Interview / Rejected.", False),
-        ("The Job Description column holds the posting verbatim; the full application "
-         "artifacts live on git branch <slug> under applications/<slug>/.", False),
+        ("Salary is the posted range from the JD when the posting names one, otherwise "
+         "a researched estimate marked (est., <source>).", False),
+        ("The Job Description column holds the posting as plain text; the original "
+         "markdown and all application artifacts live on git branch <slug> under "
+         "applications/<slug>/.", False),
     ]
     for i, (text, bold) in enumerate(lines, start=1):
         cell = ws.cell(row=i, column=1, value=text)
@@ -140,13 +143,14 @@ def load_or_create_workbook() -> Workbook:
 
 def next_data_row(ws) -> int:
     row = ws.max_row
-    while row > 1 and all(ws.cell(row=row, column=c).value in (None, "") for c in range(1, 6)):
+    while row > 1 and all(ws.cell(row=row, column=c).value in (None, "") for c in range(1, 7)):
         row -= 1
     return row + 1
 
 
-def write_row(ws, row: int, date: dt.date, company: str, role: str, status: str, jd: str):
-    values = [date, company, role, status, jd]
+def write_row(ws, row: int, date: dt.date, company: str, role: str, status: str,
+              salary: str, jd: str):
+    values = [date, company, role, status, salary, jd]
     for col, value in enumerate(values, start=1):
         cell = ws.cell(row=row, column=col, value=value)
         cell.font = Font(name=FONT_NAME, size=11)
@@ -177,7 +181,7 @@ def cmd_add(args):
     action = "Updated existing" if target else "Added"
     target = target or next_data_row(ws)
 
-    write_row(ws, target, date, company, role, args.status, jd)
+    write_row(ws, target, date, company, role, args.status, (args.salary or "").strip(), jd)
     wb.save(WORKBOOK_PATH)
     print(f"{action} row {target} on sheet '{ws.title}': {company} - {role} [{args.status}]")
 
@@ -230,6 +234,9 @@ def main():
     p_add.add_argument("--company", required=True)
     p_add.add_argument("--role", required=True)
     p_add.add_argument("--status", default="Applied", choices=STATUS_OPTIONS)
+    p_add.add_argument("--salary", default="",
+                       help="posted range from the JD, or researched estimate marked "
+                            "(est., <source>), or 'Not posted'")
     p_add.add_argument("--jd-file", help="path to the saved jd.md (preferred)")
     p_add.add_argument("--jd", help="job description text, if no file")
     p_add.set_defaults(func=cmd_add)
