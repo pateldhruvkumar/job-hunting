@@ -48,6 +48,26 @@ def parse_month_sheet_name(title: str):
         return None
 
 
+def strip_markdown(text: str) -> str:
+    """Convert jd.md-style markdown to plain readable text for the Excel cell."""
+    text = re.sub(r"(?m)^\s*```.*$", "", text)                      # code fences
+    text = re.sub(r"!\[([^\]]*)\]\([^)]*\)", r"\1", text)           # images -> alt text
+    text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)            # [text](url) -> text
+    text = re.sub(r"\*\*([^*\n]+)\*\*|__([^_\n]+)__",
+                  lambda m: m.group(1) or m.group(2), text)          # bold
+    text = re.sub(r"\*([^*\n]+)\*", r"\1", text)                    # *italic*
+    text = re.sub(r"(?<!\w)_([^_\n]+)_(?!\w)", r"\1", text)         # _italic_
+    text = re.sub(r"(?m)^\s{0,3}#{1,6}\s+", "", text)               # heading markers
+    text = re.sub(r"(?m)^\s{0,3}>\s?", "", text)                    # blockquote markers
+    text = re.sub(r"(?m)^\s{0,3}([-*_])\s*(?:\1\s*){2,}$", "", text)  # horizontal rules
+    text = re.sub(r"(?m)^(\s*)[-*+]\s+", r"\1- ", text)             # normalize bullets
+    text = text.replace("`", "")                                    # inline code ticks
+    text = re.sub(r"\\([\\*_{}\[\]()#+.!>-])", r"\1", text)         # markdown escapes
+    text = re.sub(r"(?im)^\s*job description \(verbatim\)\s*\n", "", text, count=1)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def clean_text(text: str) -> str:
     text = ILLEGAL_XLSX_CHARS.sub("", text or "").strip()
     if len(text) > MAX_JD_CHARS:
@@ -141,7 +161,7 @@ def cmd_add(args):
         jd = Path(args.jd_file).read_text(encoding="utf-8", errors="replace")
     elif args.jd:
         jd = args.jd
-    jd = clean_text(jd)
+    jd = clean_text(strip_markdown(jd))
     company, role = args.company.strip(), args.role.strip()
 
     wb = load_or_create_workbook()
