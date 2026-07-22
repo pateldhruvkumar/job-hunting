@@ -86,8 +86,9 @@ def make_readme(wb: Workbook):
          "(scripts/update-application-tracker.py) when an application is registered.", False),
         ("Status is the only column meant to be edited by hand - use its dropdown: "
          "Applied / Interview / Rejected.", False),
-        ("Salary is the posted range from the JD when the posting names one, otherwise "
-         "a researched estimate marked (est., <source>).", False),
+        ("Salary is a plain range like '80K to 95K' ('X to Y per hour' for hourly, "
+         "'USD' suffix only when not CAD, 'Not posted' when unknown) - posted range "
+         "when the JD names one, else the researched estimate.", False),
         ("The Job Description column holds the posting as plain text; the original "
          "markdown and all application artifacts live on git branch <slug> under "
          "applications/<slug>/.", False),
@@ -235,8 +236,9 @@ def main():
     p_add.add_argument("--role", required=True)
     p_add.add_argument("--status", default="Applied", choices=STATUS_OPTIONS)
     p_add.add_argument("--salary", default="",
-                       help="posted range from the JD, or researched estimate marked "
-                            "(est., <source>), or 'Not posted'")
+                       help="plain range only, e.g. '80K to 95K' or '55 to 58 per hour' "
+                            "('USD' suffix if not CAD); 'Not posted' when unknown - "
+                            "no source tags, bonus notes, or other annotations")
     p_add.add_argument("--jd-file", help="path to the saved jd.md (preferred)")
     p_add.add_argument("--jd", help="job description text, if no file")
     p_add.set_defaults(func=cmd_add)
