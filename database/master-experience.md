@@ -6,9 +6,11 @@
 
 ## Operations Data Assistant — Northeastern University Vancouver, BC | Jan 2026 – Jun 2026
 
-- Optimized Power BI dashboards by refactoring DAX measures and calculated columns, reducing report refresh time by 13%.
-- Managed a student records database of 1,000+ active students, maintaining data accuracy and integrity to support operations reporting and daily workflows.
-- Diagnosed and rewrote an inefficient cost-calculation query in the operations database, correcting pricing logic and reducing university order spend by thousands of dollars annually.
+- Identified and corrected roughly $120K CAD of incorrectly applied tax on campus supply orders by auditing MySQL cost-calculation queries, finding that tax-exempt grocery items were being charged Vancouver's 12% tax, and fixing the pricing logic and affected records.
+- Restructured item categorization in the operations MySQL database, adding distinct categories for grocery (dairy, non-dairy, food items), kitchen equipment, and furniture, which simplified report queries and enabled reliable category-level spend reporting.
+- Cut Power BI report refresh time by 13% by refactoring DAX measures and calculated columns against the new category schema, replacing convoluted query logic with direct column references.
+- Managed a student records database of 9,000+ active students, maintaining data accuracy and integrity to support operations reporting and daily workflows.
+- Translated requirements from daily operations meetings into MySQL queries and report updates supporting day-to-day ordering and reporting decisions.
 
 ---
 
