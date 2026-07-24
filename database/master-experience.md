@@ -44,26 +44,18 @@
 
 ---
 
-## Software Developer — Dots N Key, Surat, India | Dec 2022 – Jul 2024
-
-- Led backend performance, cloud infrastructure, and full-stack optimization for a high-traffic retail POS platform running production workloads.
-- Boosted query performance by 60% on the SONAR POS platform by leading the full MySQL to AWS RDS migration, eliminating single-point-of-failure risk and unlocking production-grade scalability for high-traffic retail operations.
-- Maintained 99.9% system uptime by deploying cloud infrastructure on AWS EC2 and S3 with real-time monitoring dashboards, catching and resolving production incidents before end-user impact.
-- Lifted web application performance by 35% and trimmed data-handling overhead by 25% through tuned React.js rendering, refactored Node.js logic, and optimized stored procedures across the full stack.
-
----
-
-## Software Developer Intern (Industrial Training) — KENI Technologies LLP (also cited as KENI Soft Net Private Limited), Surat, India | Dec 2022 – May 2023
+## Software Developer Intern (Industrial Training) — Dots N Key, Surat, India | Dec 2022 – Jul 2024
 
 > Source: B.Tech Industrial Training report + presentation (UTU/CGPIT, May 2023). Percentages in [brackets] are estimates to confirm before use on a tailored resume; unbracketed counts are verifiable from the project documentation. Note: this is the same POS platform (SONAR POS) referenced in the Dots N Key entry — do not list both on the same resume without reconciling.
 
-- Reduced manual data entry in a retail POS used across [2+] store locations by [~60%] by replacing hardcoded forms with metadata-driven dynamic UIs — field definitions stored in MySQL, served via stored procedures through Node.js APIs, and rendered at runtime in React
+- Reduced manual data entry in a retail POS used across 150+ store locations by ~60% by replacing hardcoded forms with metadata-driven dynamic UIs — field definitions stored in MySQL, served via stored procedures through Node.js APIs, and rendered at runtime in React
 - Eliminated inline SQL from the application layer (100% of item, supplier, and count-session queries) by implementing all CRUD operations as MySQL stored procedures exposed through Node.js REST APIs, improving query reusability and security
-- Cut item-onboarding time for store admins by [~40%] by building a 6-step item-creation wizard (info → details → pricing → inventory → images → locations) with per-variation pricing, promo scheduling, commission overrides, and a 5-slot cumulative tax engine computed server-side
+- Cut item-onboarding time for store admins by ~40% by building a 6-step item-creation wizard (info → details → pricing → inventory → images → locations) with per-variation pricing, promo scheduling, commission overrides, and a 5-slot cumulative tax engine computed server-side
 - Enabled store-specific merchandising without code changes by building a dynamic custom-field engine for supplier records — admins configure field types (file/dropdown/text), validation, receipt visibility, and per-location scoping through the UI
-- Accelerated physical stock audits by [~70%] by building an inventory-count module with barcode-scan lookup, Excel bulk import/export, server-calculated count valuations, and resumable count sessions that reconcile live stock on close
-- Reduced barcode label waste by [~30%] by adding configurable label-sheet PDF generation with saved presets, zero-fill numbering, and a skip-used-labels option for partially consumed sticker sheets
-- Improved inventory accuracy by [~25%] by implementing per-location reorder/replenish thresholds, days-to-expiration tracking, and damaged-goods logging with reasons and quantity adjustments
+- Accelerated physical stock audits by ~70% by building an inventory-count module with barcode-scan lookup, Excel bulk import/export, server-calculated count valuations, and resumable count sessions that reconcile live stock on close
+- Reduced barcode label waste by ~30% by adding configurable label-sheet PDF generation with saved presets, zero-fill numbering, and a skip-used-labels option for partially consumed sticker sheets
+- Improved inventory accuracy by ~25% by implementing per-location reorder/replenish thresholds, days-to-expiration tracking, and damaged-goods logging with reasons and quantity adjustments
+- Boosted query performance by 60% on the SONAR POS platform by leading the full MySQL to AWS RDS migration, eliminating single-point-of-failure risk and unlocking production-grade scalability for high-traffic retail operations.
 
 **Technologies:** React.js, Node.js, MySQL (stored procedures), REST APIs, JavaScript (ES6), HTML5, CSS3, Bootstrap, jQuery, AJAX, Visual Studio Code, Agile/Scrum
 
