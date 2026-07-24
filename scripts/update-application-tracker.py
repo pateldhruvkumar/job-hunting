@@ -89,9 +89,10 @@ def make_readme(wb: Workbook):
         ("Salary is a plain range like '80K to 95K' ('X to Y per hour' for hourly, "
          "'USD' suffix only when not CAD, 'Not posted' when unknown) - posted range "
          "when the JD names one, else the researched estimate.", False),
-        ("The Job Description column holds the posting as plain text; the original "
-         "markdown and all application artifacts live on git branch <slug> under "
-         "applications/<slug>/.", False),
+        ("The Job Description column holds the posting as plain text, shown as a "
+         "3-line preview per row - click a cell to read the full text in the formula "
+         "bar. The original files and all application artifacts live on git branch "
+         "<slug> under applications/<slug>/.", False),
     ]
     for i, (text, bold) in enumerate(lines, start=1):
         cell = ws.cell(row=i, column=1, value=text)
@@ -157,6 +158,10 @@ def write_row(ws, row: int, date: dt.date, company: str, role: str, status: str,
         cell.font = Font(name=FONT_NAME, size=11)
         cell.alignment = Alignment(vertical="top", wrap_text=False)
     ws.cell(row=row, column=1).number_format = "yyyy-mm-dd"
+    # Wrap the JD inside its own column (no overflow into neighbors) and pin the
+    # row height to a ~3-line preview so long postings can't blow up the layout.
+    ws.cell(row=row, column=6).alignment = Alignment(vertical="top", wrap_text=True)
+    ws.row_dimensions[row].height = 45
 
 
 def cmd_add(args):

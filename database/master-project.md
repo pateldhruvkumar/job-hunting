@@ -37,6 +37,58 @@ One project, three interchangeable presentations. Each variant below is self-con
 - Built an enrichment pass in which a second LLM call summarizes results, proposes 2-3 follow-up questions, and picks a chart type the frontend renders automatically, degrading to a plain table if the call fails.
 - Trimmed token spend by disabling model reasoning for the SQL step and capping conversation history at the last 10 messages.
 
+### Full project narrative (reference — not resume copy)
+
+Canonical story of the project in Dhruv's own words. Use this for cover letters, interview prep, and behavioral answers; the resume bullets above are derived from it.
+
+**1. Data sourcing (~2 weeks).** Spent two weeks finding a dataset that could actually make a difference in the seaweed market. Landed on two sources:
+
+- **FAO:** global production, capture quantity, aquaculture quantity, and aquaculture value.
+- **Statistics Canada:** canada_interprovincial_trade, canada_aquaculture_production_value, canada_aquaculture_valueadded, canada_ns_leases, canada_ns_rockweed, canada_seaweed_exports, and canada_bc_aqua_sites.
+
+Total: ~33,700 data rows across 11 CSVs.
+
+**2. Data pipeline and EDA.** Followed the standard pipeline: data summary, cleaning, analysis, then a full EDA once the shape of the data was understood.
+
+**3. KPIs (21 total).** Built KPIs across five groups: Canada Economics, Canada Licensing, Gross Output, Export Value, and Value Per lb.
+
+- Preprocessing: Python (pandas + NumPy) turning the CSVs into JSON, tested with pytest.
+- Frontend: React 18 (useData + useMemo), plain JavaScript for the KPI math, a reusable KpiCard component, Tailwind CSS with lucide-react icons, Recharts for charts, built with Vite and tested with Vitest.
+
+**4. AI chatbot (user-facing).** Takes a plain-English prompt and returns an answer with context, a graph, a table, and the SQL query used, so the user can verify the result.
+
+**5. AI chatbot (behind the scenes).** At startup (once):
+
+- Load the FAO seaweed CSVs into an in-memory DuckDB database.
+- Load a small embedding model (bge-small-en-v1.5) that turns text into vectors.
+- Pre-embed two things: every real data value (country/species names) and a set of example question→SQL pairs.
+
+Per question:
+
+- Entity matching: match the question against the pre-embedded data values to find the exact spellings that exist in the data (so "korea kelp" maps to the real names in the tables).
+- Few-shot retrieval: pull the 3 most similar past question→SQL examples to guide the model.
+- Prompt build: combine the database schema, the matched entities, the examples, and the last 10 messages of chat history.
+- SQL generation: the LLM (Llama 3.3 70B via Groq) writes a SQL query from that context.
+- Safety check: reject anything that isn't a read-only SELECT before it runs.
+- Execution: run the query against DuckDB to get real numbers.
+- Answer: a single number is formatted directly; a table of rows gets a second LLM call to summarize it in one sentence.
+- Return everything: the plain-English answer, the generated SQL, and the raw data (so the frontend can also draw a chart/table).
+
+**6. Export feature.** Added an Export button to every dashboard tab:
+
+- Download a tab as PDF, PowerPoint, or Excel — entirely in the browser, no backend needed.
+- Captures chart images and embeds them in the PDF and PowerPoint files.
+- PDF = branded report with logo, header, and footer. PowerPoint = branded slide deck (title slide + one slide per chart). Excel = the actual raw data plus a sources sheet.
+- Source citations are preserved in every exported file.
+- Export libraries load only on click, so the app stays fast; export is blocked while a tab is loading and double-clicks are debounced.
+- Libraries: jsPDF (PDF), pptxgenjs (PowerPoint), SheetJS (Excel), html-to-image + Plotly (chart images).
+
+**7. Deployment.**
+
+- **Frontend:** Vercel, static React/Vite build, live at seaweed-industry.vercel.app. All dashboard tabs, charts, KPIs, and Excel export run entirely client-side from pre-computed JSON — the visualization layer needs no server.
+- **Backend:** FastAPI service (DuckDB + embedding model + Groq LLM) powering the AI chatbot. Runs locally via Uvicorn on port 8000; deployable to any Python host (Railway/Fly.io/Render) by setting GROQ_API_KEY and pointing the frontend at the hosted URL.
+- **Architecture:** Decoupled frontend/backend — the static dashboard is independent of the AI service, so the core product stays fast and always available even if the chatbot backend is offline.
+
 ---
 
 ## Other Projects
